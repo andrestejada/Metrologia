@@ -1,0 +1,219 @@
+:root{
+    --bg-sidebar:rgb(0, 0, 83);
+    --hover-menu-principal:rgb(0, 0, 110);
+    --bg-sub-menu:rgb(0, 0, 134);
+    --hover-sub-menu:rgba(0, 0, 150, 0.575);
+    --bg-submenu-tercerNivel:rgb(6, 6, 180);
+    --hover-submenu-tercernivel:rgb(0, 0, 201);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.nav{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-btn{
+    display: flex;
+    flex-flow: nowrap row;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.fa-chevron-down{
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+
+.menu-lateral{
+    min-width: 15rem;
+    max-width: 15rem;
+    height: 100vh;
+    padding: 0.5em 0;
+    transition: 0.4s ease;    
+    background-color: var(--bg-sidebar);
+    display: flex;
+    flex-flow: nowrap column;
+    overflow: hidden scroll;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+
+    
+}
+
+.menu-lateral::-webkit-scrollbar{
+    opacity: 0;
+    width: 7px;
+}
+
+.menu-lateral::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 5px;
+}
+
+
+.menu-opciones{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu-lateral-item{
+    padding: 0;
+    text-align: center;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.menu-lateral-item:hover{
+    background-color: var(--hover-menu-principal);
+}
+
+
+
+.menu-lateral-item a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.menu-lateral-enlace{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em 1.2em 0.5em 2em;
+    position: relative;
+}
+
+
+
+
+.menu-lateral-enlace span{
+    width:70% ;
+    text-align: left;
+}
+
+.fa-chevron-down:before {
+    content: "\f078";
+    position: absolute;
+    bottom: 35%;
+    right: 10%;
+}
+
+
+
+.sub-menu{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display:none;
+    flex-direction: column;
+    background-color: var(--bg-sub-menu);
+    transition: all 0.3s ease;
+}
+
+.sub-menu > li:hover  {
+    background-color: var(--hover-sub-menu);
+}
+
+
+.submenu-desplegado{
+    display: block;
+}
+
+.sub-menu-lateral-enlace{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+    padding: 0.5em 1.2em 0.5em 3.6em;
+}
+
+.sub-menu-lateral-enlace span{
+    width: 70%;
+    text-align: left;
+
+}
+
+.box-information{
+    display: flex;
+    flex-flow: nowrap column;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    position: relative;
+    top: 45%;
+    
+}
+
+.box-information a{
+   color: rgba(206, 206, 206, 0.74);
+   transition: 0.3s ease;
+    
+}
+.box-information a:hover{
+    color: rgba(255, 255, 255, 0.74);
+     
+ }
+
+
+
+
+/* Estilos de navBar colapsado */
+
+.sidebar-collapse{
+    margin-left: -15rem;
+    position: relative;
+    
+   
+}
+
+
+
+/* Estilos para tercer nivel de menus */
+
+
+
+.sub-menu-nivel-tres > li :hover{
+    background-color: var(--hover-submenu-tercernivel);
+}
+
+.sub-menu-nivel-tres{
+    background-color: var(--bg-submenu-tercerNivel);
+    transition: 0.3s ease;
+    display: none;
+    flex-direction: column;
+    transition: 0.3s ease ;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width:768px){
+    :root{
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .contenedor-btn{
+        width: 60%;
+    }
+}

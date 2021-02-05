@@ -1,0 +1,16 @@
+{
+  "name": "metrologia",
+  "version": "1.0.0",
+  "description": "Primer prototipo",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
+    "firebase": "^8.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Metro App",
+  "license": "ISC"
+}

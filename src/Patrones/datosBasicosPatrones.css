@@ -1,0 +1,21 @@
+.main-box{
+    padding: 1rem 5rem;
+}
+
+.main-box label {
+    font-weight: bold;
+}
+
+
+fieldset {
+    border: 1px solid rgb(177, 187, 177);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+legend{
+    float: none;
+    width: max-content;
+    padding: 0.2em 0.5em;
+    
+}

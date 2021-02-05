@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../dashBoard.css">
+    <link rel="stylesheet" href="./datosBasicosPatrones.css">
+</head>
+<body>
+ 
+
+<div class="main-container" >
+
+<!-- Barra Lateral -->
+
+  <aside class="menu-lateral">
+
+    <h2 class='text-white text-center fs-6 my-4 titulo-dashboard'>Gestion Metrologica</h2>
+
+    <ul class="menu-opciones d-flex flex-column justify-content-center">
+
+      <li class="menu-lateral-item"> 
+        <a class='menu-lateral-enlace' href="../index.html">
+          <i class="fas fa-columns me-2"></i><span>DashBoard</span></a>
+      </li>
+
+      <hr class=" bg-light m-0 p-0">
+
+      <li class="menu-lateral-item"> 
+
+            <a class='menu-lateral-enlace' id="toggle-sub-menu-ingresar" href="#">
+              <i class="fas fa-tachometer-alt me-2"></i><span>Ingresar</span><div class="fas fa-chevron-down"></div>
+            </a>
+
+              <ul class="sub-menu" id="sub-menu-ingresar" >
+
+                <!-- SUB-MENU DE EQUIPOS -->
+
+                    <li class="sub-menu-lateral">
+                        <a class='sub-menu-lateral-enlace' id="toggle-sub-menu-equipos" href="#">
+                           <span>Equipos</span><div class="fas fa-chevron-down"></div>
+                        </a>
+
+                        <ul class="sub-menu-nivel-tres" id="sub-menu-equipos">
+                          <li class="w-100" ><a class="d-block w-100 ps-5 text-start py-2" href="../Equipos/datos-basicos-equipos.html">Datos Basicos</a></li>
+                          <li class="w-100" ><a class="d-block w-100 ps-5 text-start py-2" href="#">Datos Metrologicos</a> </li>
+                          <li class="w-100" ><a class="d-block w-100 ps-5 text-start py-2" href="#">Datos Complementarios</a></li>
+                        </ul>
+
+                     </li>
+
+                    <li class="sub-menu-lateral">
+                        <a class='sub-menu-lateral-enlace' id="toggle-sub-menu-patrones" href="#">
+                           <span>Patrones</span><div class="fas fa-chevron-down"></div>
+                        </a>
+                        <ul class="sub-menu-nivel-tres" id="sub-menu-patrones">
+                          <li class="w-100" ><a class="d-block w-100 ps-5 text-start py-2" href="./datos-basicos-patrones.html">Datos Basicos</a></li>
+                          <li class="w-100" ><a class="d-block w-100 ps-5 text-start py-2" href="#">Datos Metrologicos</a> </li>
+                          <li class="w-100" ><a class="d-block w-100 ps-5 text-start py-2" href="#">Datos Complementarios</a></li>
+                        </ul>
+                     </li>
+
+                    <li class="sub-menu-lateral">
+                        <a class='sub-menu-lateral-enlace' href="#">
+                           <span>Programacion</span><div class="fas fa-chevron-down"></div>
+                        </a>
+                     </li>
+                    <li class="sub-menu-lateral">
+                        <a class='sub-menu-lateral-enlace' href="#">
+                           <span>Novedades</span><div class="fas fa-chevron-down"></div>
+                        </a>
+                     </li>
+                   
+              </ul>             
+      </li>
+
+      <hr class=" bg-light m-0 p-0">
+
+        <li class="menu-lateral-item">           
+          <a class='menu-lateral-enlace' href="#">
+            <i class="fas fa-search me-2"></i><span>Consultar</span>
+          </a>
+        </li>      
+                
+                  
+  </li>
+
+      <hr class="bg-light m-0 p-0">
+
+      <li class="menu-lateral-item"> 
+        <a class='menu-lateral-enlace' href="#">
+          <i class="fas fa-file-alt me-2"></i><span>Reportes</span>
+        </a>
+      </li>
+
+      <hr class="bg-light m-0 p-0">
+
+      <li class="menu-lateral-item"> 
+        <a class='menu-lateral-enlace' id="toggle-sub-menu-configuraciones" href="#">
+          <i class="fas fa-user-cog me-2"></i><span>Configuraciones</span><div class="fas fa-chevron-down"></div>
+        </a>
+        <ul class="sub-menu"  id="sub-menu-Configuraciones" >
+              <li class="sub-menu-lateral">
+                  <a class='sub-menu-lateral-enlace' href="#">
+                     <span>Usuarios</span>
+                  </a>
+              </li>
+        </ul>
+        
+      </li>
+
+      <hr class="bg-light m-0 p-0">
+    
+
+    </ul>
+
+    <section class="box-information" >
+      <a href="#">Soporte</a>
+      <a href="#">Ayudar</a>
+    </section>
+   
+  </aside>
+
+ 
+ <main>
+   <!-- Navegacion -->
+ <nav class="nav bg-dark">
+
+      <div class="d-flex align-items-center">
+        <button class='btn btn-light mx-3'type="button" id="btn-collapse"> <i class="fas fa-bars"></i></button>
+        <div class="text-white mx-3 "><h1>Metro App</h1></div>
+        
+      </div>
+
+
+      <div class="contenedor-btn">
+        <!-- Notificaciones -->
+        <button type="button" class="btn btn-primary  fas fa-bell">
+          <span class="badge bg-secondary">4</span>
+        </button>
+      <!-- <--DropDown-->
+        <div class="dropdown mx-5">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Mayaguez
+          </button>
+          <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar Seccion</a></li>
+            <li><a class="dropdown-item" href="#">Ayuda</a></li>
+          </ul>
+        </div> 
+    </div>
+
+  </nav>
+
+
+  
+<section class='main-box'>
+
+    <h2 class="text-center font-bold mb-5" >Ingresar Datos Basicos de Patrones</h2>
+
+    <form class="row g-3" id="formularioBasicosPatrones">
+        
+        <div class="col-md-6">
+          <label for="codigoEquipo" class="form-label ">Codigo</label>
+          <input type="number" class="form-control" id="codigoPatrones" >
+        </div>
+
+        <div class="col-md-6">
+          <label for="descripcionPatrones" class="form-label">Descripcion</label>
+          <input type="text" class="form-control" id="descripcionPatrones">
+        </div>
+
+        <div class="col-md-6">
+          <label for="marcaPatrones" class="form-label">Marca</label>
+          <input type="text" class="form-control" id="marcaPatrones">
+        </div>
+
+        <div class="col-md-6">
+          <label for="modeloPatrones" class="form-label">Modelo</label>
+          <input type="text" class="form-control" id="modeloPatrones">
+        </div>
+
+        <div class="col-md-6">
+          <label for="seriePatrones" class="form-label">Serie</label>
+          <input type="text" class="form-control" id="seriePatrones">
+        </div>
+
+        <!-- Los option deben ser dinamicos desde la base de datos -->
+        <div class="col-md-6">
+        <label for="UbicacionPatrones" class="form-label" >Ubicacion</label>
+        <select class="form-select" aria-label="Seleccione Una Ubicacion" id="ubicacionPatrones" >
+            <option selected>Seleccione Una Ubicacion</option>
+          
+          </select>
+        </div>
+        <!-- Los option deben ser dinamicos desde la base de datos -->
+        <div class="col-md-6">
+        <label for="ResponsablePatrones" class="form-label" >Responsable</label>
+        <select class="form-select" aria-label="Seleccione Un Responsable" id="responsablePatrones">
+            <option selected >Seleccione Un Responsable</option>
+         
+          </select>
+        </div>
+
+        <div class="col-md-7">
+          <fieldset >
+            <legend>Tipo de Patron</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="radio-patrones" id="patron-equipo-medicion" value="equipo de medicion" checked >
+              <label for="" class='form-check-label' name='' >Equipo de Medicion</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="radio-patrones" id="patron-materializada" value="medida meterializada" >
+              <label for="" class='form-check-label' >Medida Materializada</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="radio-patrones" id="patron-MR" value="material de referencia" >
+              <label for="" class='form-check-label' >Material de Refencia(MR)</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="radio-patrones" id="patron-MR-certificado" value="mr certificado" >
+              <label for="" class='form-check-label'>MR Certificado</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="radio-patrones" id="patron-sistema" value="sistema de medicion" >
+              <label for="" class='form-check-label' >Sistema de Medicion</label>
+          </div>
+          </fieldset>
+
+          
+          
+        </div>
+
+        <div class="row g-3 justify-content-around" >
+            <button class="btn btn-primary col-md-3" type="submit" id="btnAgregar" >Agregar</button>
+            <button class="btn btn-secondary col-md-3" type="reset" >Limpiar</button>
+        </div>
+       
+    </form>
+    
+</section>
+  
+
+  
+</main>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+<script src="../init-firebase.js" ></script>
+
+  
+   
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="../index.js"  ></script>
+<script src="./datos-basicos-patrones.js"></script>
+    
+    
+</body>
+</html>

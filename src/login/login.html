@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Metrologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+<!-- Esto es el Header -->
+    <header class="header">
+       <div class="header-box">
+            <div class="logo" >
+                <img src="../img/cisco-logo.png" alt="">
+            </div>
+       </div>
+    </header>
+
+<!-- Esto es el formulario -->
+<main class="container">
+    <div class="main-box" >
+
+        <div class="box-form">
+            <p class="text-center text-secondary" >Inicie seccion en el panel de administracion</p>
+        <form class="w-100" id="formulario">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-secondary">Usuario</label>
+                <input type="email" class="form-control" id="usuario" aria-describedby="emailHelp">
+            </div>
+
+            <div class="w-100 mb-3">
+                <label for="exampleInputPassword1" class="form-label text-secondary">Contraseña</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">Iniciar Seccion</button>
+        </form>
+        </div>
+
+        <div class="information-box">
+            
+            <h2>Lleva la gestion metrologica de tus equipos a otro nivel</h2>            
+            <p>Monitorear la gestion metrologica de tus equipos puede ser algo tedioso y complicado. nosotros te traemos la solucion con nuestra app Metro App</p>
+            
+        </div>
+
+    </div>
+</main>
+
+<!-- Esto es el Footer -->
+<footer>
+    <div class="box-footer">
+        <div class="logo-app" ><h2>Metro App</h2></div>
+        <div  class="information-footer" ><p>copyrigth 2020 &copy;</p></div>
+    </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+
+<script src="../init-firebase.js" ></script>
+<script src="./login.js"></script>
+
+</body>
+</html>
